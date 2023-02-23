@@ -1,0 +1,139 @@
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 61vw;
+    background-image: url(../img/banner_img.png);
+    background-position: center;
+    background-size: cover;
+    border-bottom-left-radius: 175px;
+    &::after {
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        content: '.';
+        font-size: 0;
+        width: 100%;
+        height: 100%;
+        border-bottom-left-radius: 135px;
+        background: linear-gradient(135deg, #CA5EFF 0%, #004FDE 100%);
+        opacity: 0.9;
+    }
+    &__form {
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 15rem;
+    }
+    &__form-select {
+        width: 16.875rem;
+        @include text ($font-size: 1.25rem, $line-height: 1.5rem, $color: $gray);
+        padding: 0.75rem;
+        border: none;
+        background: #FFFFFF;
+        border: 1px solid #DADADA;
+        border-radius: 5px;
+        margin-right: 1.875rem;
+    }
+    &__form-input {
+        width: 27.875rem;
+        @include text ($font-size: 1.25rem, $line-height: 1.5rem, $color: $gray);
+        padding: 0.75rem;
+        border: none;
+        background: #FFFFFF;
+        border: 1px solid #DADADA;
+        border-radius: 5px;
+    }
+    .search {
+        position: absolute;
+        transform: translateX(-150%)translateY(50%);
+    }
+}
+
+.container--banner {
+    position: relative;
+    z-index: 5;
+}
+
+.main-title {
+    @include title ();
+    padding-top: 16.875rem;
+    width: 35.2rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.decoration {
+    position: absolute;
+    top: 27%;
+    right: 55%;
+}
+
+.control--wrapper {
+    padding-bottom: 2rem;
+}
+
+.control {
+    position: relative;
+    top: 50%;
+    display: block;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    background: none;
+    border-radius: 50%;
+    border: 1px solid $gray-acc;
+    margin: 0 auto;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.control-img {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%)translateY(-50%);
+}
+
+@media screen and (max-width:900px) {
+    .banner {
+        &__form-input {
+            width: 23.875rem;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .banner {
+        &__form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        &__form-input {
+            margin-top: 1.75rem;
+        }
+        .search {
+            top: 60%;
+            left: 79%;
+            display: none;
+        }
+    }
+    .main-title {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {}
+
+@media screen and (max-width:480px) {
+    .main-title {
+        @include title (4rem);
+        padding-top: 14.75rem;
+    }
+    .decoration {
+        top: 23%;
+        right: 41%;
+    }
+}

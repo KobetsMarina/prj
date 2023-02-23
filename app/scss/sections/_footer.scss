@@ -1,0 +1,134 @@
+.footer {
+    &__links {
+        display: flex;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid $gray-decor;
+    }
+    &__block {
+        width: 30%;
+        margin-top: 4.625rem;
+        margin-right: 8.125rem;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__block-list:first-child {
+        margin-right: 8rem;
+    }
+    &__block-text {
+        @include text(1.25rem, 1.5rem, $lite-gray);
+        margin-top: 1rem;
+    }
+    &__block-title {
+        @include title (1.5rem, 2rem, $gray);
+        margin-bottom: 1.5rem;
+    }
+    &__block-item {
+        padding-bottom: 8px;
+    }
+    &__block-link {
+        @include text (1.25rem, 1.5rem, $gray)
+    }
+    &__block-nav {
+        display: flex;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__info--text {
+        width: auto;
+        padding: 2.5rem 0 2.5rem 0;
+    }
+}
+
+.logo--footer path {
+    fill: $gray;
+}
+
+.social {
+    margin-top: 3rem;
+}
+
+.social__link {
+    padding-right: 5px;
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    &__input {
+        border: 1px solid $foot-inp;
+        border-radius: 5px;
+        @include text(1.25rem, 1.5rem, $lite-gray);
+        padding: 0.8rem 0 0.8rem 1rem;
+        margin-bottom: 1rem;
+    }
+    &__btn {
+        background: linear-gradient(135deg, #CA5EFF 0%, #004FDE 100%);
+        border-radius: 5px;
+        border: none;
+        @include text(1.125rem, 1.5rem, $white);
+        text-align: center;
+        padding: 0.9rem;
+        cursor: pointer;
+    }
+}
+
+@media screen and ( max-width:860px) {
+    .footer {
+        &__block {
+            margin-right: 7rem;
+        }
+    }
+}
+
+@media screen and ( max-width: 768px) {
+    .footer {
+        &__links {
+            flex-wrap: wrap;
+        }
+        &__block {
+            width: 40%;
+            &:first-child {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        &__block--wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    .social {
+        margin-top: 0;
+    }
+}
+
+@media screen and ( max-width: 600px) {
+    .social {
+        margin-top: 3rem;
+    }
+}
+
+@media screen and ( max-width: 480px) {
+    .footer {
+        &__block {
+            width: 100%;
+        }
+        &__info {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__info--text {
+            width: auto;
+            padding-top: 2.5rem;
+            &:last-child {
+                padding: 1.5rem 0 2.5rem 0;
+            }
+        }
+    }
+}
