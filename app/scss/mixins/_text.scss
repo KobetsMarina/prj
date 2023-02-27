@@ -1,8 +1,0 @@
-@mixin text ($font-size: 1.5rem, $line-height:2rem, $color: $gray) {
-    font-family: $Josefin-Sans;
-    font-style: normal;
-    font-weight: 300;
-    font-size: $font-size;
-    color: $color;
-    line-height: $line-height;
-}
